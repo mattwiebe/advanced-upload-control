@@ -1,0 +1,22 @@
+/*
+Theme Name: Advanced Upload Demo
+Author: Matt Wiebe
+Author URI: http://automattic.com/
+Version: 0.2
+License: GNU General Public License v2 or later
+Template: twentytwelve
+*/
+
+#mw-logo {
+	max-width:100%;
+	max-height: 100px;
+	float: left;
+	margin: 10px 20px 10px 0;
+}
+#mw-logo + hgroup {
+	float: left;
+}
+/* clearfix */
+#masthead {
+	overflow: hidden;
+}
