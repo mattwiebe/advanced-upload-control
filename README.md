@@ -1,5 +1,4 @@
-advanced-upload-control
-=======================
+# Advanced Upload Control (for the WordPress Customizer)
 
 A WordPress Customizer image upload control that uses the media modal to demonstrate building advanced controls.
 
