@@ -27,10 +27,6 @@ class MW_Advanced_Upload_Control extends WP_Customize_Control {
 	public function enqueue() {
 		// enqueues all needed media resources
 		wp_enqueue_media();
-		// Except for its templates - those are attached to hooks that don't exist
-		// in the Customizer. Just add once
-		if ( ! has_action( 'customize_controls_print_footer_scripts', 'wp_print_media_templates' ) )
-			add_action( 'customize_controls_print_footer_scripts', 'wp_print_media_templates' );
 
 		// Finally, ensure our control script and style are enqueued
 		wp_enqueue_script( 'advanced-upload-control' );
