@@ -46,8 +46,9 @@
 		upload: function( event ) {
 			event.preventDefault();
 
-			if ( ! this.frame )
+			if ( ! this.frame ) {
 				this.initFrame();
+			}
 
 			this.frame.open();
 		},
@@ -95,7 +96,7 @@
 			var desired = [ 'id', 'sizes', 'url' ];
 			var output = {};
 			$.each( desired, function( i, key ){
-				output[key] = attachment[key];
+				output[ key ] = attachment[ key ];
 			});
 			return output;
 		},

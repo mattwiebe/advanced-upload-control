@@ -4,16 +4,19 @@
 	api( 'mw_logo_setting[logo]', function( value ){
 		value.bind( function( newVal, oldVal ){
 			// do we have a cached jQuery object yet?
-			if ( ! $logo )
+			if ( ! $logo ) {
 				$logo = $( '#mw-logo' );
+			}
 			// There isn't a logo element on the page yet
-			if ( ! $logo.length )
+			if ( ! $logo.length ) {
 				$logo = $( '<img id="mw-logo" />' ).prependTo( '#masthead' );
+			}
 
-			if ( newVal && newVal.url )
+			if ( newVal && newVal.url ) {
 				$logo.attr( 'src', newVal.url ).show();
-			else
+			} else {
 				$logo.hide();
+			}
 		});
 	})
 })(jQuery);
