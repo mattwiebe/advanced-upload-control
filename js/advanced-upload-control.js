@@ -82,6 +82,7 @@
 		pick: function() {
 			// get the attachment from the modal frame
 			var attachment = this.frame.state().get( 'selection' ).first().toJSON();
+			// we don't want All Knowledge about the image; just the needed stuff.
 			attachment = this.reduceMembers( attachment );
 			// set the setting - the callback will take care of rendering
 			this.setting( attachment );
@@ -118,7 +119,7 @@
 			}
 		},
 		/**
-		 * Called when the "Remove Image" link is clicked. Sets thes setting back
+		 * Called when the "Remove Image" link is clicked. Sets the setting back
 		 * to its default state.
 		 * @param  {object} event jQuery Event object from click event
 		 */
