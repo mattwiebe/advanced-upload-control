@@ -1,8 +1,8 @@
 (function($){
 	var api = wp.customize;
 	var $logo = null;
-	api( 'mw_logo_setting[logo]', function( value ){
-		value.bind( function( newVal, oldVal ){
+	api( 'mw_logo_setting[logo]', function( setting ){
+		setting.bind( function( newVal, oldVal ){
 			// do we have a cached jQuery object yet?
 			if ( ! $logo ) {
 				$logo = $( '#mw-logo' );
@@ -18,5 +18,5 @@
 				$logo.hide();
 			}
 		});
-	})
+	});
 })(jQuery);
